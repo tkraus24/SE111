@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="TK">
+    <meta name="description" content="W2D2 Demo">
+    <title>W2 | Demo</title>
+    <style>
+        /*must write with CSS syntax in here!*/
+
+        /* SELECTING in CSS and Javascript: select specific elements on a page: 
+        *by element type            ex: body, div, p
+        *by ID attribute            ex: #wrapper, #nav, #footer
+        *by class attribute         ex: coming in week 3 
+        */ 
+
+        div{ /* applies to ALL divs in the page*/ 
+            border:1px solid black;
+            padding:10px; /* adds 10px of space to all four sides inbetween content and this border*/ 
+            margin:5px; /* adds 5px of space to all 4 sides inbetween an element's border and its neighboring elements */ 
+        }
+
+        #wrapper { /*specifies ID name, only applies to single element with that ID */ 
+        
+        
+            background-color:white;
+        
+        }
+
+
+        #school {
+            background-color:yellow;
+
+
+        }
+
+
+        #nav, #footer {
+            background-color: rgb(200,200,200); 
+        }
+    </style> 
+
+</head>
+<body style="background-color: grey;" >
+<!-- in document styling in class-->
+    <div id="wrapper"><!--this div holds and "wraps around/together" all content on the page--> 
+        <h1>Tyler B. Kraus</h1>
+        
+        
+        <div>
+
+
+        </div>
+
+        <!--NAVIGATION-->
+        <div id="nav">
+            <!--linking to outside {remote!} pages [these are not a part of the website, they exist somewhere else online] -->
+            <!--you need the full Uniform Resource Locator / online path-->
+            <a href="https://www.meca.edu/" target="_blank">Visit MECA</a>
+            <!-- href holds the URL of the website linking to--> 
+            <!-- target "_blank" opens the page in a new browser tab-->
+        
+            <!--Linking to INTERNAL {relative} pages [these are within the site ie project root directory]-->
+            <!--usually you only will need the URI if the page is setup correctly-->
+            <a href="page2.html" target="_blank">Visit Page 2</a>
+
+
+
+            <!-- IN-PAGE "jump" links: linking to a sections within the actual page itself--> 
+            <a href ="#bio">BIO</a>
+            <a href ="#schools">SCHOOLS</a>
+            <a href ="hobbies">HOBBIES</a>
+            <a href ="footer">Bottom of Page</a>
+            </a>
+            </a>
+
+            </a>
+        </div>
+        
+        
+        
+        <!--CONTENT / SECTIONS--> 
+        <div id="bio">
+
+            <h2>About Me</h2>
+            <p> Can a man still be brave if he's afraid? That is the only time a man can be brave. A forked purple lightning bolt, on black field speckled with four-pointed stars.
+                <!-- img tags for image content on a page-->
+                <!--REMOTE/ABSOLUTE image file paths- from somewhere online, NOT our root directory-->
+                <img src="https://www.ncaa.com/_flysystem/public-s3/styles/stax_large_content_tile/public-s3/tile-images/hero/USATSI_17485872_168381516_lowres_0.jpg?h=82891463&itok=10TkwweB" alt="Bryce Young throwing the football in a NCAA game" style="width:500px;"> 
+
+
+
+                <img src="Downloads/Joe-Burrow.jpg" alt="Joe Burrow celebrates after a Bengals win" style="width:500px;"> 
+            </p>
+        </div>
+
+        <div id="school">
+            <h2>Schooling</h2>
+
+            <ol>
+                <li>School 1</li>
+                <li>School 2</li>
+                <li>School 3</li>
+            
+
+
+
+            </ol>
+        </div>
+
+        <div id="hobbies">
+            <h2>Hobbies </h2>
+            <ul>
+                <li>Hobby 1</li>
+                <li>Hobby 2</li>
+                <li>Hobby 3</li>
+
+
+
+            </ul>
+
+
+        </div>
+        
+        
+        <!--FOOTER-->
+        <div id="footer"> 
+            <a href="#wrapper">Back to Top</a>
+            <a href="page2.html#footer">Page 2 Footer</a>  
+
+            <p>&copy; 2022  |  T KRAUS  | SE111.32</p>
+
+            <!-- validation screenshot should be added -->
+
+        </div>
+
+
+
+    </div>
+</body>
+</html>
