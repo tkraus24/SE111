@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W5D1 - Forms and Tables Demo</title>
+</head>
+<body>
+    <h1>Basic Form Demo</h1>
+
+
+    <h2>Form w/o table</h2>
+    <!-- text fields for manual entry by user - value becomes what user types into the box before submitting-->
+
+    <form>
+    
+            <label>Name:</label>
+            <input type="text" name="firstName" id="firstName">            
+            
+
+            <br>
+
+
+            <label>Last Name:</label>
+            <input type="text" name="lastName" id="lastName">
+
+            <br>
+
+            <label for="email">Email: </label>
+            <input type="text" name="email" id="email" required>
+            
+            
+            
+            
+            <br>
+            <br>
+
+
+            <input type="submit" value="SUBMIT"> 
+    <!-- lables are used to match up with input elements form elements are in line so we can use <br> to seperate them--> 
+
+
+    </form>
+
+
+
+
+    <h2>Form w table</h2>
+
+
+        <form>
+            <table>
+                <!-- thead can be used for colum headers tbody is required for the table-->
+                <tbody>
+                    <tr>
+                        <!-- table row. should include on <td> for every possible colum, leave blank when no info for that row-->
+                            <td><!--first data cell in row (LEFT)-->
+                                <label for="firstName">First Name:</label>
+
+
+
+                            </td>
+                    </tr>
+                    
+                            <td><!--second data cell in row (RIGHT)-->
+                                <input type="text" id="firstName" name="firstName" maxlength="50">
+
+
+
+
+                            </td>
+                    
+                    <tr>
+                            <td><!--first data cell in row (LEFT)-->
+                                <label for="lastName">Last Name:</label>
+
+
+
+                            </td>
+                        
+                            <br>
+                            <td><!--second data cell in row (RIGHT)-->
+                                <input type="text" id="lastName" name="lastName" maxlength="50">
+
+
+
+
+                            </td>
+                    </tr>
+                    <tr>
+                            <br>
+                            <td><!--first data cell in row (LEFT)-->
+                                <label for="email">Email:</label>
+
+
+
+                            </td>
+                            <td><!--second data cell in row (RIGHT)-->
+                                <input type="text" id="email" name="email" maxlength="50">
+
+
+
+
+                            </td>
+                    </tr>
+                            <td>
+                                <textarea name="comments" rows="10" cols="20" placeholder="Your comments here......">You can populate the textbox but the user will need to delete</textarea>
+                            </td>
+
+
+
+
+
+                            <td>
+                                <label for="faveColor"> Pick your Fave Color:</label>
+
+
+
+
+
+                            </td>
+                            <td>
+                                <select name="faveColor">
+                                    <option value="red">Red</option>
+                                    <option value="orange">Orange</option>
+                                    <option value="yellow">Yellow</option>
+                                    <option value="green">Green</option>
+                                    <option value="blue">Blue</option>
+                                    <option value="indigo">Indigo</option>
+                                    <option value="violet">Violet</option>
+                                    <!-- each option must have a value-->
+
+
+                                </select>
+                            </td>
+                            <tr>
+                                <td><!-- radio buttons, only one can be chosen out of a set-->
+                                    <label for="study">Program of Study:</label>
+
+                                </td>
+                                <td>
+                                    <input type="radio" name="study" value="SE">Software Engineering <br> 
+                                    <input type="radio" name="study" value="CYB">Cybersecurity <br>
+                                    <input type="radio" name="study" value="NE">Network Engineering <br>
+                                    <input type="radio" name="study" value="WD">Web Development <br>
+
+                            
+
+                                </td>
+
+                            </tr>
+                            <tr>
+
+                                <td>
+                                    <label for="vehicle">Select your Vehicles</label>
+
+
+
+
+
+                                </td>
+
+                                <td>
+                                    <input type="checkbox" name="vehicle" value="car">car
+                                    <input type="checkbox"name="vehicle" value="ship">ship
+                                    <input type="checkbox"name="vehicle"value="horse">horse
+
+
+
+
+
+
+
+
+
+                                </td>
+
+
+
+
+
+
+
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="date">Date: </label>
+
+
+
+
+
+                                </td>
+
+                                <td>
+                                    <input type="date" name="date"> 
+
+
+
+
+
+
+                                </td>
+
+
+
+
+                            </tr>
+                            <tr>
+                                <td>
+                        
+                                
+                                <input type="submit" value="SUBMIT"> 
+                                </td>
+                            </tr>
+                                    
+
+                            
+
+
+
+
+                            
+
+                    
+
+
+
+
+
+
+                </tbody>
+
+
+
+
+
+            </table>
+
+
+
+
+
+
+        </form>
+
+
+
+
+</body>
+</html>
