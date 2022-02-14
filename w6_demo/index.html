@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Tyler Kraus" conent="T Kraus 202220">
+    <meta name="description" content="W6 JS Intro">
+
+    <title>Document</title>
+</head>
+<body>
+
+
+    <h1>Week 6 Intro Demo | Javascript</h1>
+    <script>
+        //everything in these tage must be written in JAVASCRIPT! (single line commenting) 
+        /*i want to split some comments onto multiple lines
+        i can do this (block commenting)*/ 
+        //creating a variable --> keyword "var" 
+        var num1 //declaration only
+        num1 = 7 //once declared, value can be assigned
+
+        //combine declaration and assigment onto one line 
+        var num2 = 10 
+        var num3 = 7 
+
+        //the vars of num1, num2, and num3 cannot be used until they have been assigned value
+        var sum = num2 + num3
+
+        //display data to the browser user can see the information 
+        //alert() creates a popup in the browser page to display data 
+        //alert() similar to /OUTPUT 
+        // ` ` denotes a literal string combines formatting from the .format method in python --> hold var names inside of ${VAR}
+        alert(`The sum is: \n${sum}`) //backslash n is a new line in a pop up window
+        //DISPLAY TO THE CONSOLE 
+        //for JavaScript the console is built into the developer tools
+        /*ACCESING DEVELOPER TOOLS 
+            -F12 or right-click > Inspect
+            -Choose console in upper right menu panel
+            -REFRESH the page
+        */
+       console.log(`The sum is: ${sum}`) 
+       //console.log() is primarily used for TESTING 
+       //no physical display in page, only in the dev tools
+
+       //"INPUT" gaining data from the browser pop-up where user enters information (not from a form) 
+       //prompt user for value; script waits for the enter key/ok button to be initiated before moving on 
+       prompt(`Enter your name: `) //input() in python 
+       console.log(`we have passed the prompt() `)
+        //most often we use prompt() to GAIN DATE to USE 
+       //store data from the prompt() 
+       var name= prompt(`Enter your name: `)
+       
+       console.log(name) 
+
+       alert(`Hello there ${name}!\nClick OK to continue.`) 
+
+       //all data from the prompt() is a STRING 
+       //concatenation (adding strings)
+       var lastname = prompt(`Enter your last name: `)
+
+       var full  = name + " " + lastname
+
+       console.log(full)
+
+       var num = prompt(`Enter a number to be multiplied by 7: `) 
+
+       var multi = num * 7
+
+       console.log(multi) //still shows numeric value
+
+       //for reference: Number() 
+       //num = Number(num) --> ensures num is truly a number 
+
+      
+       console.log(`The multi value is: ${multi.toFixed(2)} `) //in console [inspect]
+       alert(`${num} * 7 = ${multi} `) //in browser popup 
+
+       
+       
+        
+
+
+
+
+    </script>
+    
+</body>
+</html>

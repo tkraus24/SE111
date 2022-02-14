@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Tyler Kraus" content="T Kraus 202220">
+    <meta name="description" content="Gross Pay Calculator">
+    <title>Week 6 | Gross Pay Calculator</title>
+</head>
+<body>
+    <h1>Week 6 Gross Pay Calculator</h1>
+    <script>
+        var pay = prompt(`Enter your hourly pay: `)  
+        console.log(pay)
+          
+        var hours = prompt(`Enter your hours worked for a two week period: `)
+        console.log(hours) 
+
+        var taxrate = prompt(`Enter your tax rate: `)
+        console.log(taxrate) 
+
+        var gross = pay * hours
+        console.log(gross) 
+
+        var tax = gross * taxrate
+        console.log(tax)
+
+        var net = gross - tax
+        console.log(net) 
+
+        alert(`
+        Gross Pay $${gross.toFixed(2)} 
+        Uncle Sam's Share $${tax.toFixed(2)} 
+        Net Pay $${net.toFixed(2)} 
+        `)
+        console.log(`The Gross Pay is: ${gross.toFixed(2)} `)
+        console.log(`Uncle Sam's Share is: ${tax.toFixed(2)} `)
+        console.log(`The Net Pay is: ${net.toFixed(2)} `)
+
+    </script>
+</body>
+<img src="Capture.PNG" style="width:400px;height:160px;" >
+</html>
