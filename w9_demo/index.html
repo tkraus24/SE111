@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .red {
+        
+        border:1px solid red;
+        
+        margin-bottom:10px;
+        
+        min-height:20px;
+        
+         }
+        
+        </style>
+</head>
+<body>
+    <h1> WEEK 9 JavaScript DEMO</h1>
+<script>
+    
+
+    var people =[
+
+    {first:"Daenerys", last:"Targaryen", credit:"Queen of Meereen Khaleesi of the Great Grass Sea Mother of Dragons The Unburnt Breaker of Chains Television: Queen of the Andals and the First Men Protector of the Seven Kingdoms Lady of Dragonstone"},
+
+    {first:"Cersei", last:"Lannister", credit:"Protector of the Realm Lady Paramount of the Westerlands Lady of Casterly Rock Light of the West Queen Dowager Queen Regent Television: Queen of the Andals and the First Men" },
+
+    {first:"Yara", last:"Greyjoy", credit:"Queen of the Iron Islands and Lady Reaper of Pyke" }
+
+    ]
+    console.log(people) 
+    console.log(people[0])
+    console.log(people[0].first) //singular version
+    //get the array of info written to the HTML document page to be viewed in browser
+    //each object's info should have  border, each property value should be in it's own paragraph tag
+    var body = document.querySelector(`body`)
+    console.log(body)   //shows actual HTML 
+    console.dir(body)   //shows properties of HTML element object
+    
+    //since we need to do the same thing to every value (object) within the array, we will start with a standard loop 
+    for(let i = 0; i < people.length; i++)
+    {
+        //for every object within the array, add a div to the body element to hold the object's information
+        //create the element
+        console.log(`in the standard for loop`)
+
+        var tempDiv = document.createElement(`div`) //this does NOT ADD THE DIV TO THE PAGE 
+        
+        //add an ID and CLASS attributes to the newly created div
+        //.setAttribute() adds the attributes  to the element; needs to be provided  the attribute type, attribute value
+        tempDiv.setAttribute(`id`, i)
+        tempDiv.setAttribute(`class`, `red`)
+        tempDiv.setAttribute(`data-creator`, `TK`)
+
+        //add the object's info to the inside of the newly created div; the info comes from the value assigned to each property of the object
+        //for every property of the object
+        for(let key in people[i]) //for each key property / attribute of current object
+        {
+            //create new paragraph tag
+            var p = document.createElement(`p`) 
+
+            //create the text node of the values
+            var text = document.createTextNode(people[i][key])
+
+            //add the text to the paragraph
+            p.appendChild(text)
+            //add parapgraph to the div
+            tempDiv.appendChild(p)
+
+
+        }
+        console.log(tempDiv)
+        //add temp div to the page (body!) 
+        body.appendChild(tempDiv)
+        
+    }
+    
+
+
+</script>
+</body>
+</html>
